@@ -1,0 +1,27 @@
+:root {
+  /* Colores Primarios - Asociados a la acción y la vitalidad */
+  --primary-green: #8BC34A; /* Verde lima suave y vibrante */
+  --primary-green-dark: #689F38; /* Tono más oscuro para hover/énfasis */
+  --accent-yellow: #FFC107; /* Amarillo suave para acentos y secundarios */
+  --accent-yellow-dark: #FFB300; /* Tono más oscuro del amarillo */
+
+  /* Colores de Texto */
+  --text-primary: #37474F; /* Gris azulado oscuro para el texto principal */
+  --text-secondary: #757575; /* Gris más claro para subtítulos y descripciones */
+
+  /* Colores de Fondo */
+  --background-light: #F9FBE7; /* Beige muy claro para fondos principales */
+  --background-secondary: #E8F5E9; /* Verde muy pálido para secciones secundarias */
+
+  /* Fuentes */
+  --heading-font: 'Montserrat', sans-serif; /* Fuente moderna y con personalidad */
+  --body-font: 'Open Sans', sans-serif; /* Fuente legible y amigable para el cuerpo del texto */
+
+  /* Bordes y Formas */
+  --border-radius: 10px; /* Bordes ligeramente más redondeados */
+  --border-color: #E0E0E0; /* Gris muy claro para bordes sutiles */
+
+  /* Sombras */
+  --box-shadow-light: 0 2px 4px rgba(0, 0, 0, 0.08);
+  --box-shadow-medium: 0 4px 8px rgba(0, 0, 0, 0.12);
+}

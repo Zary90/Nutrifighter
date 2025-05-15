@@ -14,9 +14,12 @@ export class AuthController {
     private readonly authService: AuthService, // Inyecta el servicio AuthService en el constructor
     private readonly usuariosService: UsuariosService, // Inyecta el servicio UsuariosService en el constructor
   ) {}
-
+// parte realizada el 02/05
   @Post('login') // Define un endpoint POST para iniciar sesión en '/auth/login'
   @UseGuards(AuthGuard('local')) // Aplica el guardián de autenticación 'local' de Passport a esta ruta.  Este guardián validará las credenciales.
+
+// parte realizada el 29/04
+
   async login(@Request() req: any) { // El parámetro req contiene la información del usuario autenticado por el guardián local
     return this.authService.login(req.user); // Llama al método login del servicio AuthService para generar y devolver un token JWT
   }

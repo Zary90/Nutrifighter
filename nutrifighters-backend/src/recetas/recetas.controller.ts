@@ -1,9 +1,9 @@
 // parte realizada el 15/04
 
-import { Controller, Get, Post, Body, Param, Put, Delete, BadRequestException, NotFoundException } from '@nestjs/common'; // Importa los decoradores y excepciones de NestJS
+import { Controller, Get, Post, Body, Param, Put, Delete, BadRequestException, NotFoundException, Query } from '@nestjs/common'; // Importa los decoradores y excepciones de NestJS
 import { RecetasService } from './recetas.service'; // Importa el servicio RecetasService
-import { Receta } from '../entidades/receta.entity'; // Importa la entidad Receta
-import { Alimento } from '../entidades/alimentos.entidad'; // Importa la entidad Alimento
+import { Receta } from '../entities/recipe.entity'; // Importa la entidad Receta
+import { Alimento } from '../entities/food.entities'; // Importa la entidad Alimento
 
 @Controller('recetas') // Define el prefijo de la ruta para este controlador. Todas las rutas aquí comienzan con '/recetas'
 export class RecetasController {
@@ -14,11 +14,18 @@ export class RecetasController {
     return this.recetasService.create(recetaData); // Llama al método create del servicio para crear la receta
   }
 
+  // Realizado el 06/05
   @Get() // Define un endpoint GET para obtener todas las recetas
-  async findAll(): Promise<Receta[]> {
+  async findAll(
+    @Query('page') page: string = '1', // Parámetro de consulta opcional para la página actual (por defecto: '1')
+    @Query('limit') limit: string = '10', // Parámetro de consulta opcional para el número de resultados por página (por defecto: '10')
+  ): Promise<{ data: Receta[]; total: number }> {
+    const pageNumber = parseInt(page, 10); // Convierte el parámetro de página a número entero
+    const limitNumber = parseInt(limit, 10); // Convierte el parámetro de límite a número entero
     return this.recetasService.findAll(); // Llama al método findAll del servicio para obtener todas las recetas
   }
 
+   // parte realizada el 15/04
   @Get(':id') // Define un endpoint GET para obtener una receta por su ID
   async findOne(@Param('id') id: string): Promise<Receta | undefined> {
     return this.recetasService.findOne(parseInt(id, 10)); // Llama al método findOne del servicio para obtener una receta por su ID. Convierte el id a número.

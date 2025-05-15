@@ -1,0 +1,82 @@
+
+body {
+  font-family: 'Open Sans', sans-serif; /* Una fuente moderna y legible */
+  margin: 0;
+  padding: 0;
+  background-color: #F4F8E9; /* Un verde muy pálido y suave */
+  color: #4A5568; /* Un gris azulado oscuro, legible y moderno */
+  line-height: 1.6; /* Mejora la legibilidad del texto */
+  -webkit-font-smoothing: antialiased; /* Mejora el renderizado de la fuente en navegadores webkit */
+  -moz-osx-font-smoothing: grayscale; /* Mejora el renderizado de la fuente en Firefox */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px; /* Un poco más de espacio interior */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2D3748; /* Un gris más oscuro para los títulos */
+  font-weight: 700; /* Títulos más destacados */
+  line-height: 1.3;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+a {
+  color: #43A047; /* Verde más intenso para los enlaces */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #2E7D32; /* Verde aún más oscuro al pasar el ratón */
+  text-decoration: underline;
+}
+
+ul, ol {
+  margin-bottom: 1.5rem;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Estilos para imágenes (opcional) */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Evita espacios extra debajo de la imagen */
+}
+
+/* Estilos para formularios (si los tienes globalmente) */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+  padding: 12px;
+  border: 1px solid #CBD5E0; /* Un gris azulado claro para los bordes */
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #43A047; /* Verde intenso al enfocar */
+  box-shadow: 0 1px 3px rgba(67, 160, 71, 0.3); /* Sombra suave al enfocar */
+}

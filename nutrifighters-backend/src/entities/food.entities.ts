@@ -1,7 +1,7 @@
 // parte realizada el 12/04
 
 import { Entity, PrimaryGeneratedColumn, Column, ManyToMany } from 'typeorm';
-import { Receta } from './receta.entity';
+import { Receta } from './recipe.entity';
 
 @Entity(({ name: 'alimentos' })) // Define la entidad y el nombre de la tabla en la base de datos
 export class Alimento {

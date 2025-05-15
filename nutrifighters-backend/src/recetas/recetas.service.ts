@@ -20,12 +20,18 @@ export class RecetasService {
     const receta = this.recetasRepository.create(recetaData); // Crea una instancia de Receta
     return this.recetasRepository.save(receta); // Guarda la receta en la base de datos y la devuelve
   }
-
+   //Realizado el 06/05
   // Método para obtener todas las recetas
-  async findAll(): Promise<Receta[]> {
-    return this.recetasRepository.find({ relations: ['ingredientes'] }); // Obtiene todas las recetas y carga la relación 'ingredientes'
+  async findAll(page: number = 1, limit: number = 10): Promise<{ data: Receta[]; total: number }> {
+    const [data, total] = await this.recetasRepository.findAndCount({ // Realiza la consulta a la base de datos con las opciones de filtrado y paginación
+      relations: ['ingredientes'], // Carga la relación con ingredientes, importante para las recetas
+      skip: (page - 1) * limit, // Calcula el número de registros a saltar (offset) para la paginación
+      take: limit, // Limita el número de registros a devolver por página
+    });
+    return { data, total };
   }
-
+  
+  // parte realizada el 15/04
   // Método para obtener una receta por su ID
   async findOne(id: number): Promise<Receta | undefined> {
     const receta = await this.recetasRepository.findOne({ where: { id }, relations: ['ingredientes'] }); // Busca una receta por su ID y carga la relación 'ingredientes'

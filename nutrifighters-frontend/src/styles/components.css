@@ -1,0 +1,98 @@
+/* Estilos para componentes reutilizables - Tema Nutrición */
+
+/* Botón Principal */
+.button {
+  display: inline-block; /* Para que se ajuste al contenido */
+  padding: 12px 24px;
+  border-radius: 8px;
+  background-color: #8BC34A; /* Verde lima suave */
+  color: #FFFFFF; /* Blanco */
+  font-weight: 600; /* Un poco más de énfasis */
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease; /* Transición suave para el hover */
+  font-size: 1rem; /* Tamaño de fuente base */
+  line-height: 1.5;
+  text-align: center;
+}
+
+.button:hover {
+  background-color: #689F38; /* Verde oliva un poco más oscuro */
+}
+
+.button.secondary { /* Un estilo secundario para acciones menos importantes */
+  background-color: #FFC107; /* Amarillo suave */
+}
+
+.button.secondary:hover {
+  background-color: #FFB300; /* Amarillo un poco más oscuro */
+}
+
+/* Tarjeta de Contenido */
+.card {
+  background-color: #F9FBE7; /* Beige muy claro, casi blanco */
+  border-radius: 12px; /* Bordes un poco más redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); /* Sombra más sutil y moderna */
+  padding: 25px; /* Un poco más de espacio interior */
+  margin-bottom: 25px; /* Más espacio entre tarjetas */
+  border: 1px solid #E0E0E0; /* Borde muy sutil para definición */
+}
+
+.card-title { /* Un estilo para el título dentro de la tarjeta */
+  color: #43A047; /* Verde más intenso para destacar */
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.card-subtitle { /* Un estilo para un subtítulo dentro de la tarjeta */
+  color: #757575; /* Gris más suave */
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.card-text { /* Estilo para el texto principal dentro de la tarjeta */
+  color: #212121; /* Negro más suave */
+  line-height: 1.7;
+}
+
+/* Input de Formulario */
+.input {
+  padding: 12px;
+  border: 1px solid #BDBDBD; /* Gris claro para el borde */
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%; /* O el ancho deseado */
+  box-sizing: border-box; /* Para que el padding no afecte el ancho total */
+  margin-bottom: 15px;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #8BC34A; /* Verde lima al enfocar */
+  box-shadow: 0 1px 3px rgba(139, 195, 74, 0.3); /* Sombra suave al enfocar */
+}
+
+/* Texto destacado o etiqueta */
+.tag {
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: #DCEDC8; /* Verde muy claro */
+  color: #388E3C; /* Verde más oscuro */
+  border-radius: 6px;
+  font-size: 0.9rem;
+  margin-right: 8px;
+  margin-bottom: 5px;
+}
+
+/* Enlace */
+.link {
+  color: #1976D2; /* Azul más oscuro */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: #0D47A1; /* Azul aún más oscuro */
+  text-decoration: underline;
+}

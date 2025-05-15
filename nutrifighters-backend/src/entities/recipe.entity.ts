@@ -1,7 +1,7 @@
 // parte realizada el 15/04
 
 import { Entity, PrimaryGeneratedColumn, Column, ManyToMany, JoinTable, } from 'typeorm';
-import { Alimento } from '../entidades/alimentos.entidad'; //Importacion de entidad alimento
+import { Alimento } from '../entities/food.entities'; //Importacion de entidad alimento
 
 
 @Entity({ name: 'recetas' }) // Define la entidad y el nombre de la tabla en la base de datos
